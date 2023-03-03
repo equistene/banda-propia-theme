@@ -492,10 +492,21 @@ section.searchBlock .container form button {
   left: 0;
   width: 100%;
   background-color: #FFF;
+  z-index: 100;
 }
 .navmobile nav {
   padding: 1rem;
+  font-size: 1.6rem;
 }
+.navmobile nav ul li a {
+  display: table;
+  color: #000;
+  padding: 0.4rem 0;
+}
+.navmobile nav ul li a:hover {
+  color: #cc0000;
+}
+
 footer {
   padding: 20px;
   background: url(../img/guilloche.png) center center;
