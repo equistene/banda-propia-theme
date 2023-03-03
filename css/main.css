@@ -1021,6 +1021,17 @@ section.posts-home {
   }
 }
 
+.products-home .wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media only screen and (min-width: 780px) {
+  .products-home .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 body.single-post {
   background: #e8e9d0;
 }

@@ -38,6 +38,7 @@
 		</section>
 
 		<section class="products-home container">						
+				<div class="wrapper">
 				<?php
 				$args = array(
 					'post_type' => 'product',
@@ -50,6 +51,7 @@
 					<?php get_template_part('template-parts/parts/item'); ?>
 
 				<?php endwhile; wp_reset_postdata(); endif; ?>				
+				</div>
 		</section>
 
 	</main>
