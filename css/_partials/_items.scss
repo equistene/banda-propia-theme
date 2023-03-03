@@ -15,6 +15,7 @@
         transition: 0.2s;
         transform-style: preserve-3d;
         box-shadow: 3px 3px 8px 0px rgba(151, 146, 153, 0.6);
+        object-fit: cover;
         &:hover {
           box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
         }
