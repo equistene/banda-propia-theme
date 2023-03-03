@@ -12,6 +12,7 @@ body {
 *,
 *:after,
 *:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -192,7 +193,6 @@ h1.titleCat {
   height: 300px;
   overflow: hidden;
 }
-
 .item a {
   position: relative;
   display: block;
@@ -200,7 +200,6 @@ h1.titleCat {
   height: 100%;
   color: #213439;
 }
-
 .item a .data {
   position: absolute;
   z-index: 2;
@@ -212,31 +211,24 @@ h1.titleCat {
   padding: 10px;
   transition: 0.3s;
 }
-
 .item a .data.redcircle {
   background-color: #cc0000;
 }
-
 .item a .data.sand {
   background-color: #c2c2b2;
 }
-
 .item a .data.tomato {
   background-color: #ffb9b4;
 }
-
 .item a .data.mustard {
   background-color: #e1d651;
 }
-
 .item a .data.lightblue {
   background-color: #b3d8e4;
 }
-
 .item a .data.lightSand {
   background-color: #e8e9d0;
 }
-
 .item a .data h3 {
   font-family: "EB Garamond";
   font-weight: 400;
@@ -245,95 +237,113 @@ h1.titleCat {
   margin: 0;
   padding: 0 0 8px 0;
 }
-
 .item a .data span.cat {
   margin: 0;
   padding: 0;
   font-size: 1.4rem;
   font-weight: 600;
 }
-
 .item a .thumb {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
 }
-
 .item a .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(1);
 }
-
 .item a:hover .data {
   opacity: 0;
 }
-
 .item.redcircle {
   border-radius: 50%;
   overflow: hidden;
 }
 
+header {
+  position: relative;
+}
 header .container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
   padding: 10px 20px;
 }
-
 @media only screen and (min-width: 780px) {
   header .container {
     padding: 20px 10px;
   }
 }
-
 header .container a.logo img {
   max-height: 60px;
 }
-
 header .container section.right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: flex-end;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 header .container section.right nav {
   display: none;
   margin: 0;
 }
-
 @media only screen and (min-width: 780px) {
   header .container section.right nav {
     display: block;
   }
 }
-
 header .container section.right nav ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: flex-end;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 header .container section.right nav ul li {
   margin: 0 0 0 15px;
   font-size: 1.6rem;
@@ -341,19 +351,15 @@ header .container section.right nav ul li {
   text-transform: uppercase;
   position: relative;
 }
-
 header .container section.right nav ul li a {
   color: #000;
 }
-
 header .container section.right nav ul li a:hover {
   color: #cc0000;
 }
-
 header .container section.right nav ul li.current-menu-item a {
   color: #cc0000;
 }
-
 header .container section.right nav ul li ul.sub-menu {
   display: none;
   position: absolute;
@@ -364,28 +370,23 @@ header .container section.right nav ul li ul.sub-menu {
   padding: 10px;
   margin: 0;
 }
-
 header .container section.right nav ul li ul.sub-menu li {
   width: 100%;
   display: block;
   margin: 0;
   padding: 0;
 }
-
 header .container section.right nav ul li ul.sub-menu li a {
   display: block;
   white-space: nowrap;
   padding: 6px 0;
 }
-
 header .container section.right nav ul li:hover {
   color: red;
 }
-
 header .container section.right nav ul li:hover ul.sub-menu {
   display: block;
 }
-
 header .container section.right a.tienda {
   display: block;
   color: #000;
@@ -394,17 +395,14 @@ header .container section.right a.tienda {
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
-
 @media only screen and (min-width: 780px) {
   header .container section.right a.tienda {
     display: none;
   }
 }
-
 header .container section.right a.tienda:hover {
   color: #cc0000;
 }
-
 header .container section.right button {
   display: block;
   background: none;
@@ -413,7 +411,6 @@ header .container section.right button {
   margin: 0 0 0 10px;
   padding: 8px;
 }
-
 @media only screen and (min-width: 780px) {
   header .container section.right button.menuButtonMobile {
     display: none;
@@ -421,16 +418,13 @@ header .container section.right button {
     padding: 12px;
   }
 }
-
 header .container section.right button img {
   height: 15px;
   width: auto;
 }
-
 header .container section.right button:hover {
   opacity: 0.5;
 }
-
 header .container section.right a.cart-customlocation {
   display: table;
   color: #000;
@@ -439,7 +433,6 @@ header .container section.right a.cart-customlocation {
   padding: 5px 14px;
   border-radius: 3px;
 }
-
 header .container section.right a.cart-customlocation:hover {
   background: rgba(0, 0, 0, 0.2);
 }
@@ -448,29 +441,24 @@ section.searchBlock {
   background: rgba(0, 0, 0, 0.1);
   display: none;
 }
-
 section.searchBlock .container {
   padding: 10px;
 }
-
 @media only screen and (min-width: 780px) {
   section.searchBlock .container {
     padding: 10px 0;
   }
 }
-
 section.searchBlock .container form {
   display: grid;
   grid-template-columns: auto 100px;
   grid-gap: 20px;
   font-size: 1.4rem;
 }
-
 section.searchBlock .container form input {
   width: 100%;
   padding: 6px 4px;
 }
-
 section.searchBlock .container form button {
   width: 100%;
   padding: 6px 4px;
@@ -483,7 +471,6 @@ section.searchBlock .container form button {
 .onlyDesktop {
   display: none !important;
 }
-
 @media only screen and (min-width: 780px) {
   .onlyDesktop {
     display: table !important;
@@ -493,106 +480,121 @@ section.searchBlock .container form button {
 .onlyMobile {
   display: table !important;
 }
-
 @media only screen and (min-width: 780px) {
   .onlyMobile {
     display: none !important;
   }
 }
 
+.navmobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+}
+.navmobile nav {
+  padding: 1rem;
+}
 footer {
   padding: 20px;
   background: url(../img/guilloche.png) center center;
   background-size: cover;
 }
-
 @media only screen and (min-width: 780px) {
   footer {
     padding: 20px 0;
   }
 }
-
 footer .container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container {
+    -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     -ms-align-items: flex-end;
     align-items: flex-end;
   }
 }
-
 footer .container section {
   width: 100%;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section {
     width: auto;
   }
 }
-
 footer .container section nav {
   margin: 0 0 20px 0;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section nav {
     margin: 0;
   }
 }
-
 footer .container section nav ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section nav ul {
+    -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     -ms-justify-content: flex-start;
     justify-content: flex-start;
     -ms-flex-pack: flex-start;
   }
 }
-
 footer .container section nav ul li {
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0 15px 0 0;
 }
-
 footer .container section nav ul li ul.sub-menu {
   display: none;
 }
-
 footer .container section nav ul li a {
   color: #000;
   display: block;
 }
-
 footer .container section nav ul li a:hover {
   color: #cc0000;
 }
-
 footer .container section p {
   display: table;
   width: 100%;
@@ -602,28 +604,23 @@ footer .container section p {
   margin: 0 auto;
   padding: 4px 0;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section p {
     margin: 0;
     text-align: left;
   }
 }
-
 footer .container section p a {
   color: #cc0000;
 }
-
 footer .container section p a:hover {
   text-decoration: underline;
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section p a.mailto {
     margin: 0 60px 0 0;
   }
 }
-
 @media only screen and (max-width: 480px) {
   footer .container section img.gob {
     margin: 0 auto;
@@ -632,7 +629,6 @@ footer .container section p a:hover {
     text-align: center;
   }
 }
-
 @media only screen and (min-width: 780px) {
   footer .container section img.gob {
     max-height: 90px;
@@ -644,13 +640,11 @@ footer .container section p a:hover {
   display: table;
   color: #000;
 }
-
 @media only screen and (min-width: 780px) {
   .itemBook a .thumb {
     height: 300px;
   }
 }
-
 .itemBook a .thumb img {
   height: 100%;
   display: table;
@@ -661,22 +655,18 @@ footer .container section p a:hover {
   transform-style: preserve-3d;
   box-shadow: 3px 3px 8px 0px rgba(151, 146, 153, 0.6);
 }
-
 .itemBook a .thumb img:hover {
   box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
 }
-
 .itemBook a .data {
   padding: 10px 0 0;
 }
-
 .itemBook a .data h2.titleBook {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
   padding: 0;
 }
-
 .itemBook a .data h3 {
   font-family: "EB Garamond";
   font-size: 1.8rem;
@@ -684,14 +674,12 @@ footer .container section p a:hover {
   margin: 0;
   padding: 5px 0;
 }
-
 .itemBook a .data p {
   font-size: 1.25rem;
   font-family: "EB Garamond";
   margin: 0;
   padding: 0;
 }
-
 .itemBook a:hover .thumb img {
   box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
 }
@@ -701,19 +689,16 @@ footer .container section p a:hover {
   grid-template-columns: 1fr 3fr;
   grid-gap: 10px;
 }
-
 @media only screen and (min-width: 780px) {
   .itemAuthor {
     grid-template-columns: 100px auto;
     grid-gap: 20px;
   }
 }
-
 .itemAuthor .thumb {
   width: 100%;
   height: auto;
 }
-
 .itemAuthor .data h3 {
   font-size: 1.6rem;
   font-weight: normal;
@@ -721,13 +706,11 @@ footer .container section p a:hover {
   margin: 0 0 6px 0;
   padding: 0;
 }
-
 .itemAuthor .data p {
   margin: 0;
   padding: 0;
   font-size: 1.4rem;
 }
-
 .itemAuthor .data a {
   color: #cc0000;
   display: table;
@@ -736,7 +719,6 @@ footer .container section p a:hover {
   margin: 6px 0 0;
   padding: 2px;
 }
-
 .itemAuthor .data a:hover {
   background: #cc0000;
   color: #fff;
@@ -746,38 +728,32 @@ section.featured-home {
   min-height: 300px;
   position: relative;
 }
-
 @media only screen and (min-width: 780px) {
   section.featured-home {
     min-height: 500px;
   }
 }
-
 section.featured-home .container {
   position: relative;
   z-index: 10;
   padding: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   section.featured-home .container {
     padding: 0;
   }
 }
-
 section.featured-home .container a {
   display: table;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
-
 @media only screen and (min-width: 780px) {
   section.featured-home .container a {
     padding: 3rem 20px;
     max-width: 60%;
   }
 }
-
 section.featured-home .container a h2 {
   color: #fff;
   font-size: 3rem;
@@ -785,25 +761,21 @@ section.featured-home .container a h2 {
   margin: 0;
   padding: 0;
 }
-
 @media only screen and (min-width: 780px) {
   section.featured-home .container a h2 {
     font-size: 4rem;
     line-height: 1.2;
   }
 }
-
 section.featured-home .container a p {
   margin: 0;
   padding: 0;
   font-size: 1.8em;
   line-height: 1;
 }
-
 section.featured-home .container a:hover {
   text-decoration: underline;
 }
-
 section.featured-home .bg {
   position: absolute;
   top: 0;
@@ -812,14 +784,12 @@ section.featured-home .bg {
   height: 100%;
   z-index: 1;
 }
-
 section.featured-home .bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
 }
-
 @media only screen and (min-width: 780px) {
   section.featured-home .bg img {
     object-fit: contain;
@@ -829,27 +799,35 @@ section.featured-home .bg img {
 section.slider-home {
   position: relative;
 }
-
 section.slider-home.container {
   padding: 0;
 }
-
 section.slider-home .item {
   height: auto;
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  -webkit-flex-direction: column-reverse;
   -moz-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item {
     height: 500px;
@@ -860,7 +838,6 @@ section.slider-home .item {
     padding: 0 40px;
   }
 }
-
 section.slider-home .item a {
   position: relative;
   z-index: 10;
@@ -868,13 +845,11 @@ section.slider-home .item a {
   color: #000;
   padding: 10px;
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item a {
     padding: 3rem 20px;
   }
 }
-
 section.slider-home .item a h2 {
   color: #000;
   font-size: 3rem;
@@ -882,14 +857,12 @@ section.slider-home .item a h2 {
   margin: 0;
   padding: 0;
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item a h2 {
     font-size: 4rem;
     line-height: 1.2;
   }
 }
-
 section.slider-home .item a p {
   margin: 0 0 20px 0;
   padding: 0;
@@ -897,11 +870,9 @@ section.slider-home .item a p {
   font-weight: 500;
   line-height: 1.5;
 }
-
 section.slider-home .item a:hover {
   text-decoration: underline;
 }
-
 section.slider-home .item .bg {
   position: absolute;
   top: 0;
@@ -910,14 +881,12 @@ section.slider-home .item .bg {
   height: 100%;
   z-index: 1;
 }
-
 section.slider-home .item .bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item .bg img {
     width: 1200px;
@@ -925,18 +894,15 @@ section.slider-home .item .bg img {
     object-fit: none;
   }
 }
-
 section.slider-home .item .thumb {
   padding: 0;
   width: 100%;
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item .thumb {
     padding: 20px;
   }
 }
-
 section.slider-home .item .thumb img {
   display: table;
   margin: 0;
@@ -945,41 +911,44 @@ section.slider-home .item .thumb img {
   max-height: 240px;
   box-shadow: 3px 3px 8px 0px rgba(151, 146, 153, 0.6);
 }
-
 @media only screen and (min-width: 780px) {
   section.slider-home .item .thumb img {
     margin: 0 auto;
     max-height: 400px;
   }
 }
-
 section.slider-home .item .thumb a {
   display: block;
 }
-
 section.slider-home .item .thumb a:hover {
   transform: translate(0, -5px);
 }
-
 section.slider-home ul.slick-dots {
   position: absolute;
   bottom: 4px;
   right: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: flex-end;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 section.slider-home ul.slick-dots li {
   margin: 0 0 0 4px;
 }
-
 section.slider-home ul.slick-dots li button {
   display: block;
   border: none;
@@ -989,7 +958,6 @@ section.slider-home ul.slick-dots li button {
   border-radius: 10px;
   text-indent: -9999px;
 }
-
 section.slider-home ul.slick-dots li.slick-active button {
   background: #fff;
 }
@@ -1001,14 +969,12 @@ section.posts-home {
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   section.posts-home {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 @media only screen and (min-width: 780px) {
   section.posts-home .item:nth-child(3) {
     grid-column-start: 3;
@@ -1048,11 +1014,9 @@ main.single section.topPost img {
   max-height: 400px;
   object-fit: cover;
 }
-
 main.single section.titlePost {
   padding: 0 20px;
 }
-
 @media only screen and (min-width: 780px) {
   main.single section.titlePost {
     display: grid;
@@ -1062,34 +1026,39 @@ main.single section.titlePost {
     margin: 40px 0 20px;
   }
 }
-
 main.single section.titlePost h1 {
   margin: 20px 0;
   padding: 0;
   font-size: 3rem;
   line-height: 1;
 }
-
 @media only screen and (min-width: 780px) {
   main.single section.titlePost h1 {
     margin: 0;
     padding: 0;
   }
 }
-
 main.single section.contentPost {
   padding: 0 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-
 @media only screen and (min-width: 780px) {
   main.single section.contentPost {
     padding: 0;
@@ -1098,44 +1067,38 @@ main.single section.contentPost {
     grid-gap: 40px;
     margin: 0;
     align-content: flex-start;
+    -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     -ms-align-items: flex-start;
     align-items: flex-start;
   }
 }
-
 main.single section.contentPost aside {
   width: 100%;
   font-size: 1.4rem;
 }
-
 @media only screen and (min-width: 780px) {
   main.single section.contentPost aside {
     text-align: left;
   }
 }
-
 main.single section.contentPost aside span.cat a {
   color: #000;
   font-weight: 600;
   font-size: 1.6rem;
 }
-
 main.single section.contentPost aside span.cat a:hover {
   text-decoration: underline;
 }
-
 main.single section.contentPost aside p {
   margin: 0;
   padding: 0;
 }
-
 main.single section.contentPost article p {
   font-size: 1.6rem;
   margin: 0 0 15px 0;
   padding: 0;
 }
-
 main.single section.contentPost article img {
   width: 100%;
   height: auto;
@@ -1148,7 +1111,6 @@ section.relatedPosts {
   margin: 40px 0;
   padding: 0 20px;
 }
-
 @media only screen and (min-width: 780px) {
   section.relatedPosts {
     grid-template-columns: repeat(4, 1fr);
@@ -1156,12 +1118,10 @@ section.relatedPosts {
     padding: 0;
   }
 }
-
 section.relatedPosts .item {
   height: 285px;
   overflow: hidden;
 }
-
 section.relatedPosts .item a {
   position: relative;
   display: block;
@@ -1169,7 +1129,6 @@ section.relatedPosts .item a {
   height: 100%;
   color: #fff;
 }
-
 section.relatedPosts .item a .data {
   position: absolute;
   z-index: 2;
@@ -1181,33 +1140,28 @@ section.relatedPosts .item a .data {
   padding: 10px;
   transition: 0.3s;
 }
-
 section.relatedPosts .item a .data h3 {
   font-size: 2rem;
   line-height: 1;
   margin: 0;
   padding: 0 0 8px 0;
 }
-
 section.relatedPosts .item a .data span.cat {
   margin: 0;
   padding: 0;
 }
-
 section.relatedPosts .item a .thumb {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
 }
-
 section.relatedPosts .item a .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(1);
 }
-
 section.relatedPosts .item a:hover .data {
   opacity: 0;
 }
@@ -1218,7 +1172,6 @@ section.bookCard {
   margin: 40px 0;
   padding: 0 20px;
 }
-
 @media only screen and (min-width: 780px) {
   section.bookCard {
     grid-template-columns: 1fr 3fr;
@@ -1226,7 +1179,6 @@ section.bookCard {
     padding: 0;
   }
 }
-
 section.bookCard .left .thumb img {
   width: 100%;
   height: auto;
@@ -1236,11 +1188,9 @@ section.bookCard .left .thumb img {
   transform-style: preserve-3d;
   box-shadow: 3px 3px 8px 0px rgba(151, 146, 153, 0.6);
 }
-
 section.bookCard .left .thumb img:hover {
   box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
 }
-
 section.bookCard .left .priceBook p.price {
   text-align: center;
   font-size: 1.8rem;
@@ -1249,20 +1199,16 @@ section.bookCard .left .priceBook p.price {
   padding: 0;
   opacity: 0.8;
 }
-
 section.bookCard .left .priceBook p.price del {
   opacity: 0.3;
 }
-
 section.bookCard .left .priceBook table.variations {
   width: 100%;
 }
-
 section.bookCard .left .priceBook table.variations select {
   width: 100%;
   font-size: 1.8rem;
 }
-
 section.bookCard .left .priceBook .woocommerce-variation-price {
   text-align: center;
   font-size: 1.6rem;
@@ -1270,7 +1216,6 @@ section.bookCard .left .priceBook .woocommerce-variation-price {
   margin: 10px 0;
   padding: 0;
 }
-
 section.bookCard .left .priceBook button.single_add_to_cart_button {
   width: 100%;
   display: block;
@@ -1284,11 +1229,9 @@ section.bookCard .left .priceBook button.single_add_to_cart_button {
   font-weight: 600;
   text-transform: uppercase;
 }
-
 section.bookCard .left .priceBook button.single_add_to_cart_button:hover {
   background: #444;
 }
-
 section.bookCard .left .priceBook h1,
 section.bookCard .left .priceBook .product_meta,
 section.bookCard .left .priceBook a.reset_variations,
@@ -1297,19 +1240,16 @@ section.bookCard .left .priceBook .quantity,
 section.bookCard .left .priceBook td.label {
   display: none !important;
 }
-
 section.bookCard .left .codeBook {
   font-size: 1.4rem;
   font-weight: 500;
 }
-
 section.bookCard .right h1 {
   margin: 0 0 8px 0;
   padding: 0;
   font-size: 2.8rem;
   font-weight: normal;
 }
-
 section.bookCard .right h3 {
   font-size: 2rem;
   font-weight: normal;
@@ -1317,30 +1257,25 @@ section.bookCard .right h3 {
   margin: 0 0 8px 0;
   padding: 0;
 }
-
 section.bookCard .right h4 {
   font-size: 1.4rem;
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
-
 section.bookCard .right .descriptionProduct p {
   font-family: "EB Garamond";
   font-size: 1.8rem;
   color: #000;
 }
-
 section.bookCard .right .descriptionProduct p a {
   color: currentColor;
   text-decoration: underline;
 }
-
 section.bookCard .right .descriptionProduct p a:hover {
   background: #000;
   color: #fff;
 }
-
 section.bookCard .right .itemAuthor {
   margin: 40px 0 0;
 }
@@ -1351,7 +1286,6 @@ section.quotes {
   padding: 0 20px;
   grid-gap: 40px;
 }
-
 @media only screen and (min-width: 780px) {
   section.quotes {
     grid-template-columns: repeat(3, 1fr);
@@ -1359,7 +1293,6 @@ section.quotes {
     padding: 0;
   }
 }
-
 section.quotes .itemQuotes p {
   font-family: "EB Garamond";
   font-size: 1.8rem;
@@ -1368,7 +1301,6 @@ section.quotes .itemQuotes p {
   margin: 0 0 10px;
   padding: 0;
 }
-
 section.quotes .itemQuotes h4 {
   font-family: "EB Garamond";
   font-size: 2rem;
@@ -1384,14 +1316,12 @@ section.quotes .itemQuotes h4 {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 section.festSingleTop div {
   display: grid;
   grid-column-start: 2;
   grid-template-columns: 1fr auto 1fr;
   align-items: flex-end;
 }
-
 section.festSingleTop div span.col {
   color: #cc0000;
   font-family: "EB Garamond";
@@ -1401,7 +1331,6 @@ section.festSingleTop div span.col {
   margin: 20px 0 0;
   padding: 0;
 }
-
 section.festSingleTop div h3 {
   color: #cc0000;
   font-family: "EB Garamond";
@@ -1417,19 +1346,16 @@ section.festSingleContent {
   padding: 80px;
   color: rgba(0, 0, 0, 0.6);
 }
-
 section.festSingleContent h2 {
   font-size: 2.2rem;
   line-height: 1.25;
   font-weight: 600;
 }
-
 section.festSingleContent h3 {
   font-size: 2rem;
   line-height: 1.25;
   font-weight: 600;
 }
-
 section.festSingleContent p {
   font-size: 1.4rem;
   font-weight: normal;
@@ -1441,14 +1367,12 @@ section.festSingleBottom {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 @media only screen and (min-width: 780px) {
   section.festSingleBottom {
     grid-template-columns: 1fr 3fr;
     grid-gap: 40px;
   }
 }
-
 section.festSingleBottom .col a.volver {
   color: #cc0000;
   font-family: "EB Garamond";
@@ -1456,11 +1380,9 @@ section.festSingleBottom .col a.volver {
   font-style: italic;
   padding: 4px 0;
 }
-
 section.festSingleBottom .col a.volver:hover {
   border-bottom: 1px solid currentColor;
 }
-
 section.festSingleBottom .col p {
   font-family: "EB Garamond";
   font-size: 1.8rem;
@@ -1468,7 +1390,6 @@ section.festSingleBottom .col p {
   margin: 0 0 10px 0;
   padding: 0;
 }
-
 section.festSingleBottom .col p em {
   font-weight: normal;
 }
@@ -1477,19 +1398,16 @@ main.page section.topPage {
   width: 100%;
   height: 45vh;
 }
-
 main.page section.topPage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 main.page section.topCatalogo .container {
   display: grid;
   grid-template-columns: 1fr;
   padding-block: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.topCatalogo .container {
     grid-template-columns: 1fr 3fr;
@@ -1497,46 +1415,39 @@ main.page section.topCatalogo .container {
     padding: 80px 0;
   }
 }
-
 main.page section.topCatalogo .container h1 {
   font-size: 2.4rem;
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.topCatalogo .container div {
     max-width: 75%;
   }
 }
-
 main.page section.topCatalogo .container div p {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 1.8rem;
   font-family: "EB Garamond";
 }
-
 main.page section.contentPage {
   padding: 0 20px;
   margin: 40px auto;
   font-size: 1.6rem;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.contentPage {
     padding: 0;
   }
 }
-
 main.page section.contentPage h2 {
   font-size: 1.8rem;
   font-weight: normal;
   margin: 0 0 20px 0;
   padding: 0;
 }
-
 main.page section.contentPage p {
   font-family: "EB Garamond";
   font-size: 2rem;
@@ -1544,27 +1455,23 @@ main.page section.contentPage p {
   margin: 0 0 30px 0;
   padding: 0;
 }
-
 main.page section.contentPage p a {
   display: inline-block;
   color: #000;
   text-decoration: underline;
   padding: 0 2px;
 }
-
 main.page section.contentPage p a:hover {
   color: #fff;
   background: #cc0000;
   text-decoration: none;
 }
-
 main.page .itemsCatalogo {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page .itemsCatalogo {
     grid-template-columns: repeat(4, 1fr);
@@ -1573,42 +1480,35 @@ main.page .itemsCatalogo {
     padding: 40px 0;
   }
 }
-
 main.page section.topAuthors h1 {
   font-size: 2.8rem;
   font-weight: 500;
   text-align: center;
 }
-
 main.page section.listAuthors {
   padding: 20px 10px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.listAuthors {
     padding: 40px 0;
   }
 }
-
 main.page section.listAuthors .authorsItems {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.listAuthors .authorsItems {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 main.page section.authorProfileTop {
   margin: 10px 0;
   padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.authorProfileTop {
     margin: 40px 0;
@@ -1617,28 +1517,23 @@ main.page section.authorProfileTop {
     padding: 0;
   }
 }
-
 main.page section.authorProfileTop .bio h1 {
   font-weight: normal;
 }
-
 main.page section.authorProfileTop .bio p {
   font-family: "EB Garamond";
   font-size: 1.8rem;
 }
-
 main.page section.authorProfileTop .photo img {
   width: 100%;
   height: auto;
 }
-
 main.page section.authorProfileBottom {
   margin: 0 0 40px 0;
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 20px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.authorProfileBottom {
     grid-template-columns: 1fr 1fr;
@@ -1646,25 +1541,21 @@ main.page section.authorProfileBottom {
     padding: 0;
   }
 }
-
 main.page section.authorProfileBottom .books {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.authorProfileBottom .books {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
 }
-
 main.page section.authorProfileBottom .relatedNews {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   main.page section.authorProfileBottom .relatedNews {
     grid-template-columns: 1fr 1fr;
@@ -1687,41 +1578,44 @@ nav.menuArchive {
   margin: 0;
   width: 100%;
 }
-
 nav.menuArchive ul {
   width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-
 nav.menuArchive ul li {
   font-size: 2rem;
   margin: 0 12px;
 }
-
 @media only screen and (min-width: 780px) {
   nav.menuArchive ul li {
     margin: 0;
   }
 }
-
 nav.menuArchive ul li a {
   color: #000;
 }
-
 nav.menuArchive ul li a:hover {
   text-decoration: underline;
 }
-
 nav.menuArchive ul li.current-menu-item a {
   color: #cc0000;
 }
@@ -1732,14 +1626,12 @@ nav.menuArchive ul li.current-menu-item a {
   grid-gap: 40px;
   padding: 20px;
 }
-
 @media only screen and (min-width: 780px) {
   .itemsListArchive {
     grid-template-columns: repeat(4, 1fr);
     padding: 40px 0;
   }
 }
-
 .itemsListArchive .item {
   height: 270px;
 }
@@ -1747,7 +1639,6 @@ nav.menuArchive ul li.current-menu-item a {
 .itemsFestArchive {
   padding: 40px 0;
 }
-
 .itemsFestArchive .item {
   height: auto;
   display: grid;
@@ -1755,25 +1646,21 @@ nav.menuArchive ul li.current-menu-item a {
   grid-template-columns: 1fr;
   margin: 0 0 120px 0;
 }
-
 @media only screen and (min-width: 780px) {
   .itemsFestArchive .item {
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
   }
 }
-
 .itemsFestArchive .item .col.thumb img {
   width: 100%;
   height: auto;
 }
-
 .itemsFestArchive .item .col .row.top {
   display: grid;
   grid-template-columns: auto auto auto;
   align-items: flex-end;
 }
-
 .itemsFestArchive .item .col .row.top h3 {
   color: #cc0000;
   font-family: "EB Garamond";
@@ -1784,15 +1671,12 @@ nav.menuArchive ul li.current-menu-item a {
   margin: 0 20px;
   padding: 0 0 20px 0;
 }
-
 .itemsFestArchive .item .col a {
   display: block;
 }
-
 .itemsFestArchive .item .col a:hover {
   opacity: 0.8;
 }
-
 .itemsFestArchive .item .col h2 {
   color: #cc0000;
   font-family: "EB Garamond";
@@ -1808,25 +1692,21 @@ section.festivalIntro {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 @media only screen and (min-width: 780px) {
   section.festivalIntro {
     grid-template-columns: 1fr 3fr;
     grid-gap: 40px;
   }
 }
-
 section.festivalIntro .col img {
   width: 100%;
   height: auto;
 }
-
 section.festivalIntro .col p {
   font-family: "EB Garamond";
   font-size: 1.8rem;
   font-weight: 500;
 }
-
 section.festivalIntro .col p em {
   font-weight: normal;
 }
