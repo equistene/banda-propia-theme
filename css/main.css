@@ -698,6 +698,9 @@ footer .container section p a:hover {
   margin: 0;
   padding: 0;
 }
+.itemBook a .data p.collection {
+  margin: 0 !important;
+}
 .itemBook a:hover .thumb img {
   box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
 }

@@ -35,7 +35,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				<?php $termAutor = wp_get_object_terms( $post->ID, 'autor'); ?>
 				<?php foreach($termAutor as $key=>$value) { $nameAutor = $termAutor[$key]->name; echo $nameAutor . " · "; } ?>
 			</h3>
-			<p>
+			<p class="colection">
 				<?php
 					$term_list = wp_get_object_terms( $post->ID, 'coleccion');
 					$termName = $term_list[0]->name;              
@@ -45,8 +45,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			<?php if ($price_html = get_post_meta(get_the_ID(), '_regular_price', true)) : ?>
 				<span class="price">$<?php echo $price_html; ?></span>
 			<?php endif; ?>
-
-			<p>PROBANDO</p>
 		</div>
 	</a>
 </div>
