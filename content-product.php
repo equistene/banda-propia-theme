@@ -35,7 +35,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				<?php $termAutor = wp_get_object_terms( $post->ID, 'autor'); ?>
 				<?php foreach($termAutor as $key=>$value) { $nameAutor = $termAutor[$key]->name; echo $nameAutor . " · "; } ?>
 			</h3>
-			<p class="colection">
+			<p class="collection">
 				<?php
 					$term_list = wp_get_object_terms( $post->ID, 'coleccion');
 					$termName = $term_list[0]->name;              
