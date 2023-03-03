@@ -240,7 +240,14 @@ section.posts-home {
     grid-template-columns: 1fr;
     gap: 1rem;
     @include respond-to($large-desktop){
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .itemBook{
+      .thumb{
+        img{
+          object-fit: cover;
+        }
+      }
     }
   }
 }

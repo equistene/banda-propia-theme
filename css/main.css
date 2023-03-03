@@ -1031,8 +1031,11 @@ section.posts-home {
 }
 @media only screen and (min-width: 780px) {
   .products-home .wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
+}
+.products-home .wrapper .itemBook .thumb img {
+  object-fit: cover;
 }
 
 body.single-post {
