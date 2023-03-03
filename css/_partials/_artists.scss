@@ -1,0 +1,57 @@
+.topArtists {
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  @include respond-to($large-desktop) {
+    padding: 40px 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include respond-to($large-desktop) {
+      grid-template-columns: 3fr 4fr;
+      align-items: center;
+      grid-gap: 20px;
+    }
+    .col {
+      h1 {
+        display: table;
+        background: $purple;
+        color: #fff;
+        font-size: 3rem;
+        padding: 8px 12px;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      .city {
+        margin: 0;
+        padding: 14px 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin: 0 0 10px 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.postsArtist {
+  padding: 20px 10px;
+  @include respond-to($large-desktop) {
+    padding: 0 0 50px 0;
+  }
+  h2.titleBand {
+    background: $peach;
+    color: #fff;
+    display: table;
+    padding: 8px 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    span {
+      font-weight: bold;
+    }
+  }
+}

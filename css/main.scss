@@ -1,0 +1,21 @@
+/* html element 62.5% font-size for REM use */
+html {
+  font-size: 62.5%;
+}
+body {
+  font: 300 11px/1.4 "Montserrat", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #444;
+}
+
+@import "_partials/_reset.scss";
+@import "_partials/_mediaqueries";
+@import "_partials/_flexbox";
+@import "_partials/_initials";
+@import "_partials/_header";
+@import "_partials/_footer";
+@import "_partials/_items";
+@import "_partials/_home";
+@import "_partials/_single";
+@import "_partials/_page";
+@import "_partials/_archive";

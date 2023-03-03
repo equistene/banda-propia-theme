@@ -1,0 +1,93 @@
+.itemBook {
+  a {
+    display: table;
+    color: #000;
+    .thumb {
+      @include respond-to($large-desktop) {
+        height: 300px;
+      }
+      img {
+        height: 100%;
+        display: table;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        transition: 0.2s;
+        transform-style: preserve-3d;
+        box-shadow: 3px 3px 8px 0px rgba(151, 146, 153, 0.6);
+        &:hover {
+          box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
+        }
+      }
+    }
+    .data {
+      padding: 10px 0 0;
+      h2.titleBook {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+      }
+      h3 {
+        font-family: $gar;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 0;
+        padding: 5px 0;
+      }
+      p {
+        font-size: 1.25rem;
+        font-family: $gar;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &:hover {
+      .thumb {
+        img {
+          box-shadow: 6px 6px 8px 0px rgba(151, 146, 153, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.itemAuthor {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  @include respond-to($large-desktop) {
+    grid-template-columns: 100px auto;
+    grid-gap: 20px;
+  }
+  .thumb {
+    width: 100%;
+    height: auto;
+  }
+  .data {
+    h3 {
+      font-size: 1.6rem;
+      font-weight: normal;
+      line-height: 1;
+      margin: 0 0 6px 0;
+      padding: 0;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.4rem;
+    }
+    a {
+      color: $red;
+      display: table;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 6px 0 0;
+      padding: 2px;
+      &:hover {
+        background: $red;
+        color: #fff;
+      }
+    }
+  }
+}

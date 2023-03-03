@@ -1,0 +1,90 @@
+footer {
+  padding: 20px;
+  background: url(../img/guilloche.png) center center;
+  background-size: cover;
+  @include respond-to($large-desktop) {
+    padding: 20px 0;
+  }
+  .container {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include respond-to($large-desktop) {
+      @include align-items(flex-end);
+    }
+    section {
+      width: 100%;
+      @include respond-to($large-desktop) {
+        width: auto;
+      }
+      nav {
+        margin: 0 0 20px 0;
+        @include respond-to($large-desktop) {
+          margin: 0;
+        }
+        ul {
+          @include flexbox;
+          @include flex-wrap(wrap);
+          @include justify-content(center);
+          @include align-items(center);
+          @include respond-to($large-desktop) {
+            @include justify-content(flex-start);
+          }
+          li {
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0 15px 0 0;
+            ul.sub-menu {
+              display: none;
+            }
+            a {
+              color: #000;
+              display: block;
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+        }
+      }
+      p {
+        display: table;
+        width: 100%;
+        color: $red;
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 4px 0;
+        @include respond-to($large-desktop) {
+          margin: 0;
+          text-align: left;
+        }
+        a {
+          color: $red;
+          &:hover {
+            text-decoration: underline;
+          }
+          &.mailto {
+            @include respond-to($large-desktop) {
+              margin: 0 60px 0 0;
+            }
+          }
+        }
+      }
+      img.gob {
+        @include respond-to($phone) {
+          margin: 0 auto;
+          display: block;
+          width: auto;
+          text-align: center;
+        }
+        @include respond-to($large-desktop) {
+          max-height: 90px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
