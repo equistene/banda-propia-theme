@@ -21,6 +21,8 @@
           <?php if ($price_html = get_post_meta(get_the_ID(), '_regular_price', true)) : ?>
             <span class="price"><?php echo $price_html; ?></span>
           <?php endif; ?>
+
+          <p>HOLA</p>
         </div>
       </a>
     </div>
