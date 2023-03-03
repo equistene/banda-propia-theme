@@ -42,6 +42,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 					echo $termName;
 				?>
 			</p>
+			<?php if ($price_html = get_post_meta(get_the_ID(), '_regular_price', true)) : ?>
+				<span class="price">$<?php echo $price_html; ?></span>
+			<?php endif; ?>
+
+			<p>PROBANDO</p>
 		</div>
 	</a>
 </div>
