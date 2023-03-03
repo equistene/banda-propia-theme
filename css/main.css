@@ -1026,8 +1026,13 @@ section.posts-home {
 }
 .products-home .wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .products-home .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media only screen and (min-width: 780px) {
   .products-home .wrapper {

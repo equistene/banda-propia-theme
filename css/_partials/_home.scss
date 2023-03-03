@@ -237,8 +237,11 @@ section.posts-home {
   margin: 1rem auto 3rem;
   .wrapper{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    @include respond-to($tablet-portrait){
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include respond-to($large-desktop){
       grid-template-columns: repeat(6, 1fr);
     }
