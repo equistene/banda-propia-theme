@@ -178,11 +178,16 @@ section.searchBlock {
   width: 100%;
   background-color: #FFF;
   z-index: 100;
+  display: none;
   nav{
     padding: 1rem;
     font-size: 1.6rem;
     ul{
-      li{        
+      li{ 
+        font-weight: 500;       
+        ul.sub-menu{
+          padding: 0 0 0 1rem;
+        }
         a{
           display: table;
           color: #000;

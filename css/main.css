@@ -493,10 +493,17 @@ section.searchBlock .container form button {
   width: 100%;
   background-color: #FFF;
   z-index: 100;
+  display: none;
 }
 .navmobile nav {
   padding: 1rem;
   font-size: 1.6rem;
+}
+.navmobile nav ul li {
+  font-weight: 500;
+}
+.navmobile nav ul li ul.sub-menu {
+  padding: 0 0 0 1rem;
 }
 .navmobile nav ul li a {
   display: table;

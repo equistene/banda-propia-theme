@@ -4,8 +4,7 @@
     console.log("HOLA");
 
     $("#menuButton").click(function () {
-      console.log("click");
-      $(".headerMenu").slideToggle("fast", function () {});
+      $(".navmobile").slideToggle("fast", function () {});
     });
 
     $(".js-slider-home").slick({
