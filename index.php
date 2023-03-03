@@ -26,7 +26,7 @@
 				<?php
 				$args = array(
 					'post_type' => 'post',
-					'post_per_page' => 8
+					'posts_per_page' => 8
 				);
 				$query = new WP_Query($args);
 
@@ -37,11 +37,11 @@
 				<?php endwhile; wp_reset_postdata(); endif; ?>				
 		</section>
 
-		<section class="posts-home container">						
+		<section class="products-home container">						
 				<?php
 				$args = array(
 					'post_type' => 'product',
-					'post_per_page' => 8
+					'posts_per_page' => 4
 				);
 				$query = new WP_Query($args);
 
