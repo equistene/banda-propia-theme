@@ -238,7 +238,7 @@ section.posts-home {
   .wrapper{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 20px;
     @include respond-to($large-desktop){
       grid-template-columns: repeat(6, 1fr);
     }
@@ -246,6 +246,17 @@ section.posts-home {
       .thumb{
         img{
           object-fit: cover;
+        }
+      }
+      .data{
+        h2{
+          margin: 0 !important;
+        }
+        p{
+          font-size: 1.5rem !important;
+        }
+        span.price{
+          font-size: 1.5rem !important;
         }
       }
     }

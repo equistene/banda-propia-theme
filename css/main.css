@@ -1027,7 +1027,7 @@ section.posts-home {
 .products-home .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 20px;
 }
 @media only screen and (min-width: 780px) {
   .products-home .wrapper {
@@ -1036,6 +1036,15 @@ section.posts-home {
 }
 .products-home .wrapper .itemBook .thumb img {
   object-fit: cover;
+}
+.products-home .wrapper .itemBook .data h2 {
+  margin: 0 !important;
+}
+.products-home .wrapper .itemBook .data p {
+  font-size: 1.5rem !important;
+}
+.products-home .wrapper .itemBook .data span.price {
+  font-size: 1.5rem !important;
 }
 
 body.single-post {
