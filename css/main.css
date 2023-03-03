@@ -1021,6 +1021,9 @@ section.posts-home {
   }
 }
 
+.products-home {
+  margin: 1rem auto 3rem;
+}
 .products-home .wrapper {
   display: grid;
   grid-template-columns: 1fr;
